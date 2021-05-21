@@ -1,0 +1,60 @@
+<div class="restoranDetaljniPrikaz">
+
+    <div class = "naziv">
+        <div>
+            <h1 class = "ime">{{restoran.naziv}}: {{restoran.adresa}}</h1>
+        </div>
+        <div class="ocenaZvezdica">
+            <a class = "ocenaLab">Ocena: 4.5</a>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStarHalf"></fa-icon>
+        </div>
+    </div>
+   
+    <div class = "info">
+
+        <div class="slikaOcenaOceni">
+            <div class="slike">
+                <div *ngFor = "let slika of restoran.slika">
+                    <div class="slikica" >
+                        <img class= "slika" src="{{slika}}" (click) = "otvoriSliku(slika)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "lokacijaDogadjaj">
+            <div>
+                <img class = "lokacija" src="{{restoran.mapaLokacijaSlika}}" (click) = "klik()">
+            </div>
+            <div>
+                <h3 class = "dogadjaj">{{restoran.dogadjaj}}</h3>
+            </div>
+        </div>
+
+   </div>
+
+   <div class = "rezervisanjeStolova">
+
+        <div>
+            Sto za 2
+        </div>
+
+        <div>
+            Sto za 4
+        </div>
+
+        <div>
+            Sto za 6
+        </div>
+
+        <div>
+            Separe
+        </div>
+
+   </div>
+
+</div>

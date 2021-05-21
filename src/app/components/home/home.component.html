@@ -1,0 +1,13 @@
+
+<div *ngIf="restorani" class="restorani">
+    
+    <div *ngFor = "let restoran of restorani; let i=index " class="restoran" (click)="klik(i)" href = "#" routerLink = "/restoran">
+
+        <app-restoran [restoran] = "restoran"></app-restoran>
+
+    </div>
+</div>
+
+
+
+
